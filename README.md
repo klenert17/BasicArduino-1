@@ -126,3 +126,4 @@ void loop() {
 
 ### Reflection
 
+When wireing, I made my wires be in the same place as the diagram, but when I put in the code, the light didn't blink. I moved the wires to GND and 13, and that made the light blink.
