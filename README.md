@@ -122,8 +122,54 @@ void loop() {
 
 ### Image or Wiring
 
-<img src="images/IMG-2335.JPG" width="400">
+<img src="Images/IMG-2661.JPG" width="400">
 
 ### Reflection
 
 When wireing, I made my wires be in the same place as the diagram, but when I put in the code, the light didn't blink. I moved the wires to GND and 13, and that made the light blink.
+
+## One Button One LED
+
+### Description & Code
+
+
+```C++
+/* sketch 1
+turn on a LED when the button is pressed
+turn it off when the button is not pressed (or released)
+*/
+int pinButton = 7; //the pin where we connect the button
+int LED = 9; //the pin we connect the LED
+
+void setup() {
+  pinMode(pinButton, INPUT); //set the button pin as INPUT
+  pinMode(LED, OUTPUT); //set the LED pin as OUTPUT
+}
+
+void loop() {
+  int stateButton = digitalRead(pinButton); //read the state of the button
+  if(stateButton == 1) { //if is pressed
+     digitalWrite(LED, HIGH); //write 1 or HIGH to led pin
+  } else { //if not pressed
+     digitalWrite(LED, LOW);  //write 0 or low to led pin
+  }
+}
+
+### Evidence
+
+[Here is my code on Arduino Create](https://create.arduino.cc/editor/Klenert17/ee1b18ff-067d-4cab-8fc5-f93190c2ed96)
+
+### Image or Wiring
+
+<img src="images/IMG-2335.JPG" width="400">
+
+### Evidence
+[Here is my code on Arduino Create]https://create.arduino.cc/editor/Klenert17/ee1b18ff-067d-4cab-8fc5-f93190c2ed96)
+
+### Image or Wiring
+
+<img src="Images/IMG-2661.JPG">
+
+### Reflection
+
+While coding this, I needed to use lots of different examples on where the wires connect. Using different images and websites, i figured out that the way I wired it works well.
